@@ -1,55 +1,49 @@
 "use client";
 
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-function Menu() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="36"
-      height="26"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="text-white"
-    >
-      <line x1="4" x2="20" y1="12" y2="12" />
-      <line x1="4" x2="20" y1="6" y2="6" />
-      <line x1="4" x2="20" y1="18" y2="18" />
-    </svg>
-  );
-}
+// function Menu() {
+//   return (
+//     <svg
+//       xmlns="http://www.w3.org/2000/svg"
+//       width="36"
+//       height="26"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="2"
+//       strokeLinecap="round"
+//       strokeLinejoin="round"
+//       className="text-white"
+//     >
+//       <line x1="4" x2="20" y1="12" y2="12" />
+//       <line x1="4" x2="20" y1="6" y2="6" />
+//       <line x1="4" x2="20" y1="18" y2="18" />
+//     </svg>
+//   );
+// }
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
+  //   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  //   const [isSticky, setIsSticky] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setTimeout(() => {
-        setIsSticky(window.scrollY > 520);
-      }, 100);
-    };
+  //   useEffect(() => {
+  //     const handleScroll = () => {
+  //       setTimeout(() => {
+  //         setIsSticky(window.scrollY > 520);
+  //       }, 100);
+  //     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //     window.addEventListener("scroll", handleScroll);
+  //     return () => window.removeEventListener("scroll", handleScroll);
+  //   }, []);
   return (
-    <header
-      className={`bg-[#1F2460] transition-all duration-300 ease-in-out ${
-        isSticky && "sticky top-0 z-100 shadow-lg"
-      }`}
-    >
+    <header className={`bg-[#1F2460] transition-all duration-300 ease-in-out`}>
       <motion.div
-        className={`bg-[#1F2460] transition-shadow duration-300 shadow-lg ${
-          isSticky ? "shadow-lg" : ""
-        }`}
+        className={`bg-[#1F2460] transition-shadow duration-300 shadow-lg`}
       >
         <div className="w-full max-w-[1230px] mx-auto text-white">
           <div className="flex flex-col justify-between items-center px-2 py-4 md:flex-row md:py-4 md:px-[22px]">
