@@ -52,7 +52,7 @@ export default function Header() {
         }`}
       >
         <div className="w-full max-w-[1230px] mx-auto text-white">
-          <div className="flex justify-between items-center px-2 py-4 md:py-4 md:px-[22px]">
+          <div className="flex flex-col justify-between items-center px-2 py-4 md:flex-row md:py-4 md:px-[22px]">
             <div>
               <Link href="/">
                 <Image
@@ -63,7 +63,7 @@ export default function Header() {
                 />
               </Link>
             </div>
-            <div className="hidden md:ml-auto md:flex gap-4">
+            <div className="w-full mt-10 md:w-auto md:mt-0 md:ml-auto md:flex gap-4">
               {/* <Link
                 href="#"
                 className="bg-transparent px-4 py-2 rounded-full text-center
@@ -78,7 +78,7 @@ export default function Header() {
               <Link
                 href="https://panalobet200.com/ph/tl"
                 className="bg-[linear-gradient(135deg,#8EE4FF_0%,#3495FF_100%)] px-4 py-2 rounded-full shadow-md text-center
-                            transition-transform transform hover:scale-105 duration-300
+                            transition-transform transform hover:scale-105 duration-300 w-full
                             md:w-[150px]
                             flex items-center justify-center
                             "
@@ -86,17 +86,17 @@ export default function Header() {
                 LOGIN
               </Link>
             </div>
-            <button
+            {/* <button
               className="md:hidden text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <Menu />
-            </button>
+            </button> */}
           </div>
         </div>
       </motion.div>
 
-      <div
+      {/* <div
         className={`
     text-white transition-all duration-500 ease-in-out overflow-hidden
     ${
@@ -119,7 +119,7 @@ export default function Header() {
             LOGIN
           </Link>
         </div>
-      </div>
+      </div> */}
     </header>
   );
 }
